@@ -1,0 +1,161 @@
+/* Base Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+select,
+input[type="number"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+}
+
+/* Prediction Container */
+
+.prediction-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.prediction-container div {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.prediction-container img {
+    width: 100%;
+    height: auto;
+}
+
+.predicted-values {
+    margin-top: 10px;
+}
+
+.predicted-values ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.predicted-values li {
+    margin-bottom: 5px;
+}
+
+
+/* Loading Screen Styles */
+
+.loading-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-graphic img {
+    width: 300px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    select,
+    input[type="number"],
+    button {
+        width: calc(50% - 5px);
+        margin-right: 5px;
+    }
+
+    input[type="text"]:last-child,
+    select:last-child,
+    input[type="number"]:last-child,
+    button:last-child {
+        margin-right: 0;
+    }
+
+    .prediction-container div {
+        flex: 0 0 calc(50% - 10px);
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        min-height: 400px; /* Set a minimum height for the container */
+        max-height: 80vh; /* Set a maximum height relative to the viewport height */
+        overflow: auto; /* Enable scrolling if content exceeds the specified height */
+    }
+    
+    
+}
